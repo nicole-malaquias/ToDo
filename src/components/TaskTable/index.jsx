@@ -22,7 +22,7 @@ const  TaskTable = () => {
     <> 
     <S.Container>
       <div>
-        <h2>Minhas tasks</h2>
+        <h2> My tasks</h2>
         <S.ContainerInput>
           <input
             type="text"
