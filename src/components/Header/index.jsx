@@ -12,17 +12,17 @@ const Header = () => {
 
   return (
     <S.Container>
- 
-      <div className="sendTo" onClick={() => sendTo("/")} >
-        <h2>Home</h2>
-        <CgArrowLeftR size={30} color="#3FAD27" />     
-      </div>
+      <S.Central>
+        <div className="sendTo" onClick={() => sendTo("/")} >
+          <h2>  <CgArrowLeftR size={30} color="#3FAD27" /> Home</h2>
+              
+        </div>
 
-      <div className="sendTo" onClick={() => sendTo("/finish")} >
-        <h2>Completed</h2>
-        <CgArrowRightR  size={30} color="#3FAD27" />  
-      </div>
-
+        <div className="sendTo" onClick={() => sendTo("/finish")} >
+          <h2> <CgArrowRightR  size={30} color="#3FAD27" /> Completed </h2>
+          
+        </div>
+      </S.Central>
     </S.Container>
   )
 }

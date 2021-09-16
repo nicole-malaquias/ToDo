@@ -8,39 +8,42 @@ export const Container = styled.div`
     
     display: flex;
     flex-direction:row;
+    justify-content:center;
     
     align-items:flex-end;
     height: 200px;
 
+  
+
+   
+
+`
+
+export const Central = styled.div`
+    width: 100%;
+    max-width: 1400px;
+   
+    display: flex;
+
+  
     div {
-       
-        max-width: 1120px;
-        margin: 0 auto;
-
-        padding: 2rem 1rem 8rem;
-
-        display: flex;
-        flex-direction:row;
         
+        width: 50%;
+        display: flex;
         justify-content: space-between;
-
         h2 {
-            font-size:2.3rem;
+            font-size:2rem;
             color:  var(--shapes)
         }
-    }
-
-    .sendTo {
-        :first-child{
+        :first-child {
             justify-content: flex-start;
         }
-
-        display: flex;
-        justify-content: flex-end;
-        align-items:   center;
-
-        padding:3px;
-        width:50%; 
+        :last-child {
+            justify-content: flex-end;
+            margin-right: 1rem;
+        }
     }
+
+  
 
 `
