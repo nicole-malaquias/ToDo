@@ -10,13 +10,12 @@ import { FiTrash} from "react-icons/fi";
 const Task = ({task,finish=false}) => {
 
     const {handleToggleTaskCompletion, handleDeletedTask ,handleRemoveTaskCompletion} = useContext(TaskListContext);
-    
     const [ModalOpen, setModalOpen] = useState(false)
 
 
     const handleModal = () => {
         setModalOpen(!ModalOpen)
-      }
+    }
 
     const handleDeleteTask = (id) => {
         handleDeletedTask(id)
@@ -25,20 +24,22 @@ const Task = ({task,finish=false}) => {
 
     return (
         <> 
+
+        {
+            ModalOpen && 
+                <S.ContainerModal > 
+                    <div className="modal-content">                              
+                            <h1> Realmente deseja deletar? </h1>
+                            <button onClick={() => handleDeleteTask(task.id)}>Sim</button>  <button onClick={handleModal}>Cancelar</button>                              
+                    </div >
+                </S.ContainerModal>
+        }
         {task !== undefined && 
             (
               
                 <S.Container >
                    
-                   {
-                    ModalOpen && 
-                        <S.ContainerModal > 
-                            <div className="modal-content">                              
-                                    <h1> Realmente deseja deletar? </h1>
-                                    <button onClick={() => handleDeleteTask(task.id)}>Sim</button>  <button onClick={handleModal}>Cancelar</button>                              
-                            </div >
-                        </S.ContainerModal>
-                    }
+                   
                     {
                     ModalOpen === false && <div className={task.isComplete ? "completed task" : "task"}>
 

@@ -57,7 +57,6 @@ const  TaskTable = () => {
       </ul>
       </S.ContainerTasks>
     </>
-    
   );
 }
 

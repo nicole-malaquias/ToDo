@@ -7,7 +7,7 @@ export const Container = styled.li`
     margin-top: 3rem;
    
     div, .div {
-        background: #ffffff;
+        background: var(--shapes);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -99,33 +99,51 @@ export const Container = styled.li`
 ` 
 
 export const ContainerModal = styled.div`
+    border:2px solid black;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    position: fixed;
+    height:100vh;
+    width: 100vw;
+    background: rgb(11,10,10,29%);
 
 
-    div, .modal-content {
+    .modal-content {
+        position: absolute;
+        left:50%;
+        top:50%;
+
         
-        color: var(--text-title);
+        height: 150px;
+        width:600px;
         
-        position: fixed;
-        top:5rem;
-        width:25rem;
-        height: 12rem;
-
-        background: white;
-
-        border-radius: 1rem;
+        transform: translate(-50%,-50%);
         display:flex;
+        align-items: center;
+        justify-content:center;
+
+        background: var(--shapes);
+        border-radius: 2rem;
+
 
         button {
-
-            width:5rem;
-            height:2.5rem;
-            border-radius: 0.25rem;
-            border:1px solid #3D3D4D;
-
-            color: var(--text-title);
-
+            height: 25px;
+            width:70px;
+            margin:3px ;
+            border: none;
+            border-radius: 5px;
         }
+
+        button:nth-of-type(1){
+            background: var(--green);
+        } 
+        button:nth-of-type(2){
+            background: red;
+        }        
     }
+    
     
      
 `

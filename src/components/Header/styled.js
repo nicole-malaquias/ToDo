@@ -12,11 +12,6 @@ export const Container = styled.div`
     
     align-items:flex-end;
     height: 200px;
-
-  
-
-   
-
 `
 
 export const Central = styled.div`
@@ -25,7 +20,6 @@ export const Central = styled.div`
    
     display: flex;
 
-  
     div {
         
         width: 50%;
@@ -37,13 +31,12 @@ export const Central = styled.div`
         }
         :first-child {
             justify-content: flex-start;
+            margin-left: 1rem;
         }
         :last-child {
             justify-content: flex-end;
             margin-right: 1rem;
         }
     }
-
-  
 
 `
